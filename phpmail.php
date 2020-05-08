@@ -6,7 +6,7 @@
 
 //SMTP needs accurate times, and the PHP time zone MUST be set
 //This should be done in your php.ini, but this is how to do it if you don't have access to that
-date_default_timezone_set('Etc/UTC');
+date_default_timezone_set('Asia/Kolkata');
 
 require 'phpmailer/PHPMailerAutoload.php';
 
@@ -41,32 +41,32 @@ $mail->SMTPSecure = 'tls';
 $mail->SMTPAuth = true;
 
 //Username to use for SMTP authentication - use full email address for gmail
-$mail->Username = "username@gmail.com";
+$mail->Username = "emailforwardertotch@gmail.com";
 
 //Password to use for SMTP authentication
-$mail->Password = "yourpassword";
+$mail->Password = "rboT;5M\[5/hi8S3";
 
 //Set who the message is to be sent from
-$mail->setFrom('from@example.com', 'First Last');
+$mail->setFrom('thecreationhut01@gmail.com', 'The creation hut');
 
 //Set an alternative reply-to address
-$mail->addReplyTo('replyto@example.com', 'First Last');
+// $mail->addReplyTo('replyto@example.com', 'First Last');
 
 //Set who the message is to be sent to
-$mail->addAddress('whoto@example.com', 'John Doe');
+$mail->addAddress('iamhimanshu7102@gmail.com', 'John Doe');
 
 //Set the subject line
 $mail->Subject = 'PHPMailer GMail SMTP test';
 
 //Read an HTML message body from an external file, convert referenced images to embedded,
 //convert HTML into a basic plain-text alternative body
-$mail->msgHTML(file_get_contents('contents.html'), dirname(__FILE__));
+$mail->Body ='This is a test mail ;-)';
 
 //Replace the plain text body with one created manually
-$mail->AltBody = 'This is a plain-text message body';
+// $mail->AltBody = 'This is a plain-text message body';
 
 //Attach an image file
-$mail->addAttachment('images/phpmailer_mini.png');
+// $mail->addAttachment('images/phpmailer_mini.png');
 
 //send the message, check for errors
 if (!$mail->send()) {
